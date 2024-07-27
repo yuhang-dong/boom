@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech API Demo</title>
+  </head>
+  <body>
+    <button id="myAudio">read it</button>
+
+    <script>
+      const audioElement = document.getElementById("myAudio");
+
+      audioElement.addEventListener("click", () => {
+        const speechText = "Hello world";
+
+        // 使用 SpeechSynthesis API 读出文本
+        const utterance = new SpeechSynthesisUtterance(speechText);
+        window.speechSynthesis.speak(utterance);
+      });
+    </script>
+  </body>
+</html>
